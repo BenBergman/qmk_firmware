@@ -1,0 +1,47 @@
+{
+    "manufacturer": "Ben Bergman",
+    "keyboard_name": "winnitron",
+    "maintainer": "Ben Bergman",
+    "development_board": "promicro_rp2040",
+    "features": {
+        "console": true,
+        "bootmagic": false,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true
+    },
+    "matrix_pins": {
+        "direct": [
+            [ "GP2", "GP3", "GP4", "GP5", "GP6", "GP7" ],
+            [ "GP1" ],
+            [ "GP20", "GP22", "GP26", "GP27", "GP28", "GP29" ],
+            [ "GP0"]
+        ]
+    },
+    "url": "https://qmk.fm",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0000",
+        "vid": "0xFEED"
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "matrix": [ 0, 0 ], "x": 0, "y": 0 },
+                { "matrix": [ 0, 1 ], "x": 0, "y": 1 },
+                { "matrix": [ 0, 2 ], "x": 0, "y": 2 },
+                { "matrix": [ 0, 3 ], "x": 0, "y": 3 },
+                { "matrix": [ 0, 4 ], "x": 0, "y": 4 },
+                { "matrix": [ 0, 5 ], "x": 0, "y": 5 },
+                { "matrix": [ 1, 0 ], "x": 1, "y": 0 },
+                { "matrix": [ 2, 0 ], "x": 2, "y": 0 },
+                { "matrix": [ 2, 1 ], "x": 2, "y": 1 },
+                { "matrix": [ 2, 2 ], "x": 2, "y": 2 },
+                { "matrix": [ 2, 3 ], "x": 2, "y": 3 },
+                { "matrix": [ 2, 4 ], "x": 2, "y": 4 },
+                { "matrix": [ 2, 5 ], "x": 2, "y": 5 },
+                { "matrix": [ 3, 0 ], "x": 3, "y": 0 }
+            ]
+        }
+    }
+}
