@@ -3,11 +3,6 @@
 
 #include QMK_KEYBOARD_H
 
-enum layer_names {
-    _P12,
-    _P34,
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
      * ┌─────────────┐
@@ -26,7 +21,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_UP, KC_LEFT, KC_DOWN, KC_RIGHT, KC_DOT, KC_SLASH,
         KC_ESCAPE,
         KC_W, KC_A, KC_S, KC_D, KC_GRAVE, KC_1,
-        PDF(_P34)
+        PDF(_P34),
+        EE_CLR
     ),
     /*
      * ┌─────────────┐
@@ -45,7 +41,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_I, KC_J, KC_K, KC_L, KC_G, KC_H,
         KC_ESCAPE,
         KC_KP_8, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_1, KC_KP_2,
-        PDF(_P12)
+        PDF(_P12),
+        EE_CLR
     )
 };
 
