@@ -5,7 +5,7 @@
     "development_board": "promicro_rp2040",
     "features": {
         "console": true,
-        "bootmagic": false,
+        "bootmagic": true,
         "extrakey": true,
         "mousekey": true,
         "rgb_matrix": true,
@@ -15,13 +15,43 @@
     "eeprom": {
         "driver": "transient"
     },
+    "bens_list_of_all_pro_micro_rp2040_pins": [
+        "-GP0",
+        "-GP1",
+        "-GP2",
+        "-GP3",
+        "-GP4",
+        "-GP5",
+        "-GP6",
+        "-GP7",
+        "GP8",
+        "GP9",
+        "GP10-corner",
+        "GP11-corner",
+        "GP12",
+        "GP13",
+        "GP14",
+        "GP15",
+        "GP16",
+        "GP17-LED",
+        "GP18-middle",
+        "-GP20",
+        "GP21",
+        "-GP22",
+        "GP23",
+        "-GP24-middle",
+        "GP25-middle",
+        "-GP26",
+        "-GP27",
+        "-GP28",
+        "-GP29"
+    ],
     "matrix_pins": {
         "direct": [
-            [ "GP2", "GP3", "GP4", "GP5", "GP6", "GP7" ],
-            [ "GP1" ],
-            [ "GP20", "GP22", "GP26", "GP27", "GP28", "GP29" ],
-            [ "GP0" ],
-            [ "GP25" ]
+            [ "GP21", "GP13", "GP23", "GP15", "GP14", "GP16" ],
+            [ "GP26", "GP29", "GP27", "GP28", "GP12", "GP9" ],
+            [ "GP8" ],
+            [ "GP5", "GP2", "GP4", "GP3", "GP7", "GP6" ]
         ]
     },
     "usb": {
@@ -32,21 +62,25 @@
     "layouts": {
         "LAYOUT": {
             "layout": [
-                { "label": "p1 up",         "matrix": [ 0, 0 ], "x": 0, "y": 0 },
-                { "label": "p1 left",       "matrix": [ 0, 1 ], "x": 0, "y": 1 },
-                { "label": "p1 down",       "matrix": [ 0, 2 ], "x": 0, "y": 2 },
-                { "label": "p1 right",      "matrix": [ 0, 3 ], "x": 0, "y": 3 },
-                { "label": "p1 b1",         "matrix": [ 0, 4 ], "x": 0, "y": 4 },
-                { "label": "p1 b1",         "matrix": [ 0, 5 ], "x": 0, "y": 5 },
-                { "label": "ESC",           "matrix": [ 1, 0 ], "x": 1, "y": 0 },
-                { "label": "p2 up",         "matrix": [ 2, 0 ], "x": 2, "y": 0 },
-                { "label": "p2 left",       "matrix": [ 2, 1 ], "x": 2, "y": 1 },
-                { "label": "p2 down",       "matrix": [ 2, 2 ], "x": 2, "y": 2 },
-                { "label": "p2 right",      "matrix": [ 2, 3 ], "x": 2, "y": 3 },
-                { "label": "p2 b1",         "matrix": [ 2, 4 ], "x": 2, "y": 4 },
-                { "label": "p2 b1",         "matrix": [ 2, 5 ], "x": 2, "y": 5 },
-                { "label": "p12/34 toggle", "matrix": [ 3, 0 ], "x": 3, "y": 0 },
-                { "label": "clear EEPROM",  "matrix": [ 4, 0 ], "x": 4, "y": 0 }
+                { "label": "p1 up",           "matrix": [ 1, 0 ], "x": 0, "y": 0 },
+                { "label": "p1 left",         "matrix": [ 1, 1 ], "x": 0, "y": 1 },
+                { "label": "p1 down",         "matrix": [ 1, 2 ], "x": 0, "y": 2 },
+                { "label": "p1 right",        "matrix": [ 1, 3 ], "x": 0, "y": 3 },
+                { "label": "p1 b1",           "matrix": [ 1, 4 ], "x": 0, "y": 4 },
+                { "label": "p1 b1",           "matrix": [ 1, 5 ], "x": 0, "y": 5 },
+                { "label": "ESC",             "matrix": [ 2, 0 ], "x": 1, "y": 0 },
+                { "label": "p2 up",           "matrix": [ 3, 0 ], "x": 0, "y": 0 },
+                { "label": "p2 down",         "matrix": [ 3, 1 ], "x": 0, "y": 2 },
+                { "label": "p2 right",        "matrix": [ 3, 2 ], "x": 0, "y": 3 },
+                { "label": "p2 left",         "matrix": [ 3, 3 ], "x": 0, "y": 1 },
+                { "label": "p2 b1",           "matrix": [ 3, 4 ], "x": 2, "y": 4 },
+                { "label": "p2 b1",           "matrix": [ 3, 5 ], "x": 2, "y": 5 },
+                { "label": "p12/34 toggle",   "matrix": [ 0, 1 ], "x": 3, "y": 0 },
+                { "label": "brightness up",   "matrix": [ 0, 2 ], "x": 4, "y": 0 },
+                { "label": "brightness down", "matrix": [ 0, 3 ], "x": 4, "y": 0 },
+                { "label": "led next",        "matrix": [ 0, 4 ], "x": 4, "y": 0 },
+                { "label": "led prev",        "matrix": [ 0, 5 ], "x": 4, "y": 0 },
+                { "label": "clear EEPROM",    "matrix": [ 0, 0 ], "x": 4, "y": 0 }
             ]
         }
     },
@@ -63,22 +97,24 @@
             "animation": "cycle_left_right",
             "hue": 125,
             "sat": 255,
-            "val": 100,
+            "val": 50,
             "speed": 40
         },
         "layout": [
-            { "matrix": [ 0, 4 ], "x": 60, "y": 32, "flags": 4 },
-            { "matrix": [ 0, 5 ], "x": 80, "y": 32, "flags": 4 },
-            { "matrix": [ 1, 0 ], "x": 112, "y": 0, "flags": 4 },
-            { "matrix": [ 2, 4 ], "x": 200, "y": 32, "flags": 4 },
-            { "matrix": [ 2, 5 ], "x": 220, "y": 32, "flags": 4 },
-            { "matrix": [ 3, 0 ], "x": 3, "y": 0, "flags": 8 },
+            { "matrix": [ 0, 0 ], "x": 3, "y": 4, "flags": 8 },
+            { "matrix": [ 0, 0 ], "x": 3, "y": 0, "flags": 8 },
+            { "matrix": [ 1, 4 ], "x": 60, "y": 32, "flags": 4 },
+            { "matrix": [ 1, 5 ], "x": 80, "y": 32, "flags": 4 },
+            { "matrix": [ 2, 0 ], "x": 112, "y": 16, "flags": 4 },
+            { "matrix": [ 3, 4 ], "x": 200, "y": 32, "flags": 4 },
+            { "matrix": [ 3, 5 ], "x": 220, "y": 32, "flags": 4 },
             { "x": 112, "y": 32, "flags": 1 },
-            { "x": 112, "y": 32, "flags": 2 }
+            { "x": 112, "y": 32, "flags": 2 },
+            { "x": 112, "y": 32, "flags": 4 }
         ]
     },
     "ws2812": {
-        "pin": "GP11",
+        "pin": "GP24",
         "driver": "vendor"
     }
 }
