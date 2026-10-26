@@ -100,7 +100,7 @@
             "animation": "cycle_left_right",
             "hue": 125,
             "sat": 255,
-            "val": 50,
+            "val": 200,
             "speed": 40
         },
         "layout": [
